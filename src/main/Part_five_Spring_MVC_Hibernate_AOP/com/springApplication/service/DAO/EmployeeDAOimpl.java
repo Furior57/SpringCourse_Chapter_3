@@ -35,7 +35,7 @@ public class EmployeeDAOimpl implements EmployeeDAO{
     // springframework. Эта аннотация означает, что Spring берет на себя ответственность
     // за открытие и закрытие транзакций, а нам лишь достаточно получить объект сессии.
     @Override
-    @Transactional
+//    @Transactional
     public List<Employee> getAllEmployees() {
         // Получаем сессию
         Session session = sessionFactory.getCurrentSession();
