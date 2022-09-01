@@ -9,18 +9,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b58a8bda-aef9-4b9e-83c5-6996049f2274" name="Changes" comment="31.08.22 Spring MVC+Hibernate+AOP_Config">
+    <list default="true" id="b58a8bda-aef9-4b9e-83c5-6996049f2274" name="Changes" comment="31.08.22 Spring MVC+Hibernate+AOP_FinalConfig">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Part_five_Spring_MVC_Hibernate_AOP/Lesson_47_StartWorking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Part_five_Spring_MVC_Hibernate_AOP/com/springApplication/entity/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Part_five_Spring_MVC_Hibernate_AOP/com/springApplication/service/Controllers/MyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Part_five_Spring_MVC_Hibernate_AOP/com/springApplication/service/DAO/EmployeeDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Part_five_Spring_MVC_Hibernate_AOP/com/springApplication/service/DAO/EmployeeDAOimpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/all-employees.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -242,7 +265,8 @@
       <workItem from="1661934950348" duration="3965000" />
       <workItem from="1661941538720" duration="2031000" />
       <workItem from="1661944392125" duration="43000" />
-      <workItem from="1661944479005" duration="476000" />
+      <workItem from="1661944479005" duration="9426000" />
+      <workItem from="1662013442052" duration="756000" />
     </task>
     <task id="LOCAL-00001" summary="31.08.22 Spring MVC+Hibernate+AOP_Creating">
       <created>1661935104840</created>
@@ -258,11 +282,23 @@
       <option name="project" value="LOCAL" />
       <updated>1661942572550</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="31.08.22 Spring MVC+Hibernate+AOP_FinalConfig">
+      <created>1661945020255</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661945020255</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:com.google.protobuf:protobuf-java" />
+    <option featureType="dependencySupport" implementationName="java:javax.persistence:javax.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate:hibernate-core" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -278,7 +314,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="31.08.22 Spring MVC+Hibernate+AOP_Creating" />
     <MESSAGE value="31.08.22 Spring MVC+Hibernate+AOP_Config" />
-    <option name="LAST_COMMIT_MESSAGE" value="31.08.22 Spring MVC+Hibernate+AOP_Config" />
+    <MESSAGE value="31.08.22 Spring MVC+Hibernate+AOP_FinalConfig" />
+    <option name="LAST_COMMIT_MESSAGE" value="31.08.22 Spring MVC+Hibernate+AOP_FinalConfig" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
