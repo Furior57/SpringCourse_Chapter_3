@@ -9,15 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b58a8bda-aef9-4b9e-83c5-6996049f2274" name="Changes" comment="1.09.22 Spring MVC+Hibernate+AOP_Service">
-      <change afterPath="$PROJECT_DIR$/src/main/Part_five_Spring_MVC_Hibernate_AOP/Lesson_49_Add_new_employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/add-employee.jsp" afterDir="false" />
+    <list default="true" id="b58a8bda-aef9-4b9e-83c5-6996049f2274" name="Changes" comment="1.09.22 Spring MVC+Hibernate+AOP_Add_employee">
+      <change afterPath="$PROJECT_DIR$/src/main/Part_five_Spring_MVC_Hibernate_AOP/Lesson_50_Update_employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Part_five_Spring_MVC_Hibernate_AOP/com/springApplication/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Part_five_Spring_MVC_Hibernate_AOP/com/springApplication/entity/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Part_five_Spring_MVC_Hibernate_AOP/com/springApplication/service/Controllers/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Part_five_Spring_MVC_Hibernate_AOP/com/springApplication/service/Controllers/MyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Part_five_Spring_MVC_Hibernate_AOP/com/springApplication/service/DAO/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Part_five_Spring_MVC_Hibernate_AOP/com/springApplication/service/DAO/EmployeeDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Part_five_Spring_MVC_Hibernate_AOP/com/springApplication/service/DAO/EmployeeDAOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Part_five_Spring_MVC_Hibernate_AOP/com/springApplication/service/DAO/EmployeeDAOimpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Part_five_Spring_MVC_Hibernate_AOP/com/springApplication/service/services/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Part_five_Spring_MVC_Hibernate_AOP/com/springApplication/service/services/EmployeeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Part_five_Spring_MVC_Hibernate_AOP/com/springApplication/service/services/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Part_five_Spring_MVC_Hibernate_AOP/com/springApplication/service/services/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/add-employee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/add-employee.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/all-employees.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/all-employees.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -269,7 +270,7 @@
       <workItem from="1662028101377" duration="160000" />
       <workItem from="1662028277311" duration="16000" />
       <workItem from="1662028306849" duration="50000" />
-      <workItem from="1662028400139" duration="2751000" />
+      <workItem from="1662028400139" duration="17583000" />
     </task>
     <task id="LOCAL-00001" summary="31.08.22 Spring MVC+Hibernate+AOP_Creating">
       <created>1661935104840</created>
@@ -313,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662019929745</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="1.09.22 Spring MVC+Hibernate+AOP_Add_employee">
+      <created>1662097253875</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1662097253875</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,7 +349,8 @@
     <MESSAGE value="31.08.22 Spring MVC+Hibernate+AOP_FinalConfig" />
     <MESSAGE value="1.09.22 Spring MVC+Hibernate+AOP_all-employees.jsp" />
     <MESSAGE value="1.09.22 Spring MVC+Hibernate+AOP_Service" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.09.22 Spring MVC+Hibernate+AOP_Service" />
+    <MESSAGE value="1.09.22 Spring MVC+Hibernate+AOP_Add_employee" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.09.22 Spring MVC+Hibernate+AOP_Add_employee" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 // У нас есть DAO класс, который получает список всех работников, теперь нам необходимо
@@ -73,10 +74,39 @@ public class MyController {
     // в которой прописываем название аттрибута созданного выше, после аннотации указываем тип
     // этого аттрибута и имя.
     public String saveEmployee(@ModelAttribute("emp") Employee employee) {
-
         employeeService.saveEmployee(employee);
 
         return "redirect:/";
     }
+    // Настало время настроить само изменение данных о работнике. Что нам для этого нужно?
+    // Прежде всего нам нужен id работника, его мы параметром прописали во view.
+    // Здесь мы получаем его следующим образом: передаем аргументом в метод id, перед типом
+    // этого аргумента указываем аннотацию @RequestParam в которую передаем имя параметра из view
+    // вызвавшего метод updateEmployee. Хорошо, у нас есть id, как нам его применить?
+    // Нам необходимо получить из базы данных работника с этим id. Для этого мы должны определить
+    // новый метод в наших интерфейсах EmployeeService и EmployeeDAO и имплементировать его
+    // в соответствующих классах. По аналогии с прошлым примером EmployeeService лишь вызывает этот метод
+    // из EmployeeDAOImpl, назовем метод getEmployee() и перейдем к нему в класс EmployeeDAOImpl
+    @RequestMapping("/updateInfo")
+    public String updateEmployee(@RequestParam("empId") int id, Model model) {
+        // А вот здесь начинаются неочевидные вещи.
+        // Первое - мы получили данные о работнике и
+        // по нажатию кнопки проваливаемся в этот метод. Здесь мы передаем эти данные в Model
+        // аттрибутом. При добавлении, обязательно, имя аттрибута нужно указать то же, что и во
+        // view, так как add-employee работает с аттрибутом с названием emp.
+        // Второе - на данный момент у нас откроется окно add-employee и при нажатии кнопки OK
+        // мы вызовем метод, который будет сохранять нового работника, а не модифицировать
+        // существующего. Как это исправить обсудим чуть позже.
+        // Третье - несмотря на то, что мы увидим данные нужного нам работника у нас остается
+        // проблема их изменения. Программа понятия не имеет какого именно работника ей нужно
+        // изменить. view не имеет никаких данных об id. Это нам тоже необходимо исправить.
+        // Сначала добавим данные об id. Перейдем в add-employee на 11 строку.
+        Employee employee = employeeService.getEmployee(id);
+        model.addAttribute("emp",employee);
+
+        return "add-employee";
+    }
+
+
 
 }

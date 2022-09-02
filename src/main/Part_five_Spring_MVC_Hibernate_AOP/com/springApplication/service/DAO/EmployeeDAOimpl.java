@@ -7,6 +7,7 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 import java.util.List;
 // Что будет делать этот класс? Он будет подключаться к базе данных. Как мы помним подключение
@@ -56,6 +57,27 @@ public class EmployeeDAOimpl implements EmployeeDAO{
     @Override
     public void saveEmployee(Employee employee) {
         Session session = sessionFactory.getCurrentSession();
-        session.save(employee);
+//        session.save(employee);
+        // Мы закомментировали старый код, который сохранял работника в базу данных.
+        // В данном случае нам нужно изменить существующего. У нас есть два способа.
+        // Первый, с помощью if-else проверяем равен ли id работника 0, если равен,
+        // это новый работник и мы используем session.save(), если не равен, значит
+        // работник уже есть и мы используем session.update().
+        // Второй, тот который мы используем написан ниже, комментарии излишне,
+        // все понятно из названия.
+        // А сейчас вещь, которую мы упустили из виду. Ранее создавав entity сущности, мы не
+        // ставили сеттер для поля id, чтобы нечаянно не изменить его. Однако в данном
+        // случае он нам необходим, так как Hibernate здесь создает объект Employee
+        // и если не будет сеттера и конструктора для id, то это значение всегда будет 0.
+        session.saveOrUpdate(employee);
+    }
+    // Здесь все просто. Получаем работника из базы через объект Session. Аннотацию
+    // @Transactional выставляем уже в сервисе, здесь она нам не обязательна.
+    // Вернемся в MyController внутрь метода updateEmployee()
+    @Override
+    public Employee getEmployee(int id) {
+        Session session = sessionFactory.getCurrentSession();
+
+        return session.get(Employee.class, id);
     }
 }
