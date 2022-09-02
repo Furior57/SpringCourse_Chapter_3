@@ -6,6 +6,7 @@ import com.springApplication.service.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -40,4 +41,42 @@ public class MyController {
         // возвращаем view, создадим этот view в соответствующей папке и перейдем в него.
         return "all-employees";
     }
+
+    // Определим новый метод. Вызываться он будет по тому адресу который мы передали
+    // в настройках кнопки Add. Что мы хотим? Мы хотим добавить работника в таблицу.
+    // То есть нам необходим объект Model, его мы передадим в метод аргументом, и
+    // объект Employee, который мы аттрибутом в этот Model передадим, для дальнейшего
+    // использования. Employee создадим внутри метода используя конструктор без параметров.
+    // Теперь создадим view add-employee и перейдем в него.
+    @RequestMapping("/addNewEmployee")
+    public String addNewEmployee(Model model) {
+
+        Employee employee = new Employee();
+        model.addAttribute("emp", employee);
+
+        return "add-employee";
+    }
+    // А вот сейчас будет несколько запутанно. Вспоминаем как устроена наша программа.
+    // Наш контроллер передает запрос в сервис, а значит нам необходимо создать в нем
+    // метод для сохранения работника, сначала мы определим этот метод в интерфейсе
+    // EmployeeService, а потом имплиментируем в самом сервисе, не забыв при этом поставить
+    // аннотацию @Transactional, чтобы не беспокоиться о закрытиях сессий.
+    // Вспоминаем дальше, как работает наш сервис. Он сам ничего не делает, он обращается
+    // к классам ответственным за обработку данных, у нас это employeeDAO. А значит
+    // в этом классе мы тоже создаем метод saveEmployee() внутри которого уже строим
+    // логику. Там все просто, получаем сессию, сохраняем объект, который заботливо передали
+    // по цепочке из контроллера. Не забудем, что в интерфейсе EmployeeDAO нам так же нужно
+    // определить метод, для порядка. Здесь же мы возвратом перенаправляем на стартовую
+    // страницу вот такой записью "redirect:/".
+    @RequestMapping("/saveEmployee")
+    // И еще одно, чтобы получить из view объект, мы пользуемся аннотацией @ModelAttribute,
+    // в которой прописываем название аттрибута созданного выше, после аннотации указываем тип
+    // этого аттрибута и имя.
+    public String saveEmployee(@ModelAttribute("emp") Employee employee) {
+
+        employeeService.saveEmployee(employee);
+
+        return "redirect:/";
+    }
+
 }

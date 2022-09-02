@@ -19,11 +19,15 @@ public class EmployeeServiceImpl implements EmployeeService {
     // Теперь вернемся в MyController на 19 строку
     @Autowired
     private EmployeeDAO employeeDAO;
-
-
     @Override
     @Transactional
     public List<Employee> getAllEmployees() {
         return employeeDAO.getAllEmployees();
+    }
+
+    @Override
+    @Transactional
+    public void saveEmployee(Employee employee) {
+        employeeDAO.saveEmployee(employee);
     }
 }

@@ -52,4 +52,10 @@ public class EmployeeDAOimpl implements EmployeeDAO{
         return query.getResultList();
         // Теперь перейдем к контроллеру MyController.
     }
+
+    @Override
+    public void saveEmployee(Employee employee) {
+        Session session = sessionFactory.getCurrentSession();
+        session.save(employee);
+    }
 }
