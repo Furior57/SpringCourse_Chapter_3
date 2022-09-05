@@ -12,4 +12,5 @@ public interface EmployeeDAO {
     public Employee getEmployee(int id);
 
 
+    void deleteEmployee(int id);
 }

@@ -80,4 +80,11 @@ public class EmployeeDAOimpl implements EmployeeDAO{
 
         return session.get(Employee.class, id);
     }
+    // Здесь все элементарно, с помощью полученного id удаляем работника. На этом мы закончили
+    // создание формы. В следующей лекции мы прикрутим аспекты к нашей программе.
+    @Override
+    public void deleteEmployee(int id) {
+        Session session = sessionFactory.getCurrentSession();
+        session.delete(session.get(Employee.class, id));
+    }
 }

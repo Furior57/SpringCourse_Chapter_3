@@ -35,6 +35,12 @@
         <c:url var="updateButton" value="/updateInfo">
             <c:param name="empId" value="${emp.id}"/>
         </c:url>
+        <%--Создадим новый линк ссылающийся на метод с requestMapping /deleteEmployee, параметром
+        передаем id работника, как в примере выше. Ниже мы создали кнопку и дествием на клик
+        поставили эту ссылку. Теперь перейдем в MyController на 109 строку--%>
+        <c:url var="deleteButton" value="/deleteEmployee">
+            <c:param name="empId" value="${emp.id}"/>
+        </c:url>
         <tr>
             <%--Геттерами получаем необходимые данные--%>
             <td>${emp.name}</td>
@@ -44,6 +50,7 @@
             <%----%>
             <td>
                 <input type="button" value="Update" onclick="window.location.href = '${updateButton}'"/>
+                <input type="button" value="Delete" onclick="window.location.href = '${deleteButton}'">
             </td>
         </tr>
     </c:forEach>

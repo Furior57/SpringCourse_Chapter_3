@@ -106,6 +106,14 @@ public class MyController {
 
         return "add-employee";
     }
+    // Опять же здесь по аналогии мы создаем цепочку методов в интерфейсах и их имплементации в
+    // классах, нас интересует EmployeeDAOImpl, перейдем в него к методу deleteEmployee()
+    @RequestMapping("/deleteEmployee")
+    public String deleteEmployee(@RequestParam("empId") int id) {
+        employeeService.deleteEmployee(id);
+
+        return "redirect:/";
+    }
 
 
 
